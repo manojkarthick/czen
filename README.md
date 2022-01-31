@@ -23,6 +23,10 @@ On macOS, if you encounter the error `"czen" cannot be opened because the develo
 xattr -d com.apple.quarantine ./amalgam
 ```
 
+## Usage
+
+[![asciicast](https://asciinema.org/a/Ib0dG5jrecHyz04T2hJnK9hSJ.svg)](https://asciinema.org/a/Ib0dG5jrecHyz04T2hJnK9hSJ)
+
 [1]: https://www.conventionalcommits.org/en/v1.0.0-beta.2/
 [2]: https://github.com/manojkarthick/czen/releases/latest
 [3]: https://brew.sh/
