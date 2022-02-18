@@ -21,8 +21,14 @@ pub fn compose_commit_message(
     breaking_change: bool,
     short_commit_message: &str,
     long_commit_message: &str,
+    ticket: &str,
 ) -> String {
     let mut commit_message = String::new();
+
+    if !ticket.is_empty() {
+        commit_message.push_str(&format!("[{}] ", ticket));
+        
+    }
 
     if !scope.is_empty(){
         commit_message.push_str(&format!("{}({})", commit_type, scope));

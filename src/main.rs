@@ -26,6 +26,7 @@ fn main() -> Result<(), CzenError>{
     })
     .with_render_config(description_render_config())
     .prompt()?;
+    let ticket = Text::new("Enter Github Issues/Jira ticket details if applicable:").prompt()?;
 
     let commit_message = compose_commit_message(
         &commit_type,
@@ -33,6 +34,7 @@ fn main() -> Result<(), CzenError>{
         breaking_change,
         &short_commit_message,
         &long_commit_message,
+        &ticket,
     );
     
     Command::new("git")
